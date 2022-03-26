@@ -14,7 +14,15 @@ export default function ListLoader() {
                 justifyContent: "space-between",
               }}
             >
-              <Flex style={{ height: 30, width: 200 }} className="animate" />
+              <Flex
+                style={{
+                  height: 30,
+                  marginTop: 6,
+                  marginBottom: 6,
+                  width: Math.floor(Math.random() * (200 - 150 + 1) + 150),
+                }}
+                className="animate"
+              />
               <Flex style={{ height: 36, width: 100 }} className="animate" />
             </Flex>
           </Flex>

@@ -1,8 +1,8 @@
-import axios from "../api/config";
+import Router from '../api/config';
 
 const server = {
-  getCurrencies: () => axios.get("/currencies"),
-  getCurrency: (currencyId:String) => axios.get(`/currency/${currencyId}`),
+  getCurrencies: () => Router.get('/currencies'),
+  getCurrency: (currencyId: String) => Router.get(`/currency/${currencyId}`)
 };
 
 export default server;

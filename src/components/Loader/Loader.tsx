@@ -1,9 +1,10 @@
-import { Flex } from "../Flex";
+import { Flex } from '../Flex';
+
 export default function Loader() {
   return (
     <Flex className="wrapper">
-      <Flex style={{ alignItems: "center" }}>
-        <Flex style={{ flexDirection: "column" }}>
+      <Flex style={{ alignItems: 'center' }}>
+        <Flex style={{ flexDirection: 'column' }}>
           <Flex
             style={{ marginBottom: 7, height: 29, width: 100 }}
             className="animate"
@@ -18,7 +19,7 @@ export default function Loader() {
             marginBottom: 15,
             height: 20.5,
             width: 200,
-            marginLeft: "auto",
+            marginLeft: 'auto'
           }}
           className="animate"
         />

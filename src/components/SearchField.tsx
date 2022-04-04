@@ -1,6 +1,6 @@
-import { useDispatch } from "react-redux";
-import { filterCurrencies } from "../currencySlice";
-import styled from "styled-components";
+import { useDispatch } from 'react-redux';
+import { filterCurrencies } from '../currencies/currencySlice';
+import styled from 'styled-components';
 
 const Field = styled.input`
   display: block;

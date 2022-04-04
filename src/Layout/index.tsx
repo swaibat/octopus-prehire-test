@@ -1,10 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
-import { Container } from "../currencies/components/Container";
-import { NavBar } from "../currencies/components/NavBar";
-import SearchField from "../currencies/components/SearchField";
-import { Typography } from "../currencies/components/Typography";
+import { Link, Outlet } from 'react-router-dom';
+import { Container } from '../components/Container';
+import { NavBar } from '../components/NavBar';
+import SearchField from '../components/SearchField';
+import { Typography } from '../components/Typography';
 
-const Layout = () => {
+function Layout() {
   return (
     <>
       <NavBar>
@@ -18,6 +18,6 @@ const Layout = () => {
       </Container>
     </>
   );
-};
+}
 
 export default Layout;

@@ -3,8 +3,8 @@ import currencyReducer from '../currencies/currencySlice';
 
 export const store = configureStore({
   reducer: {
-    currency: currencyReducer,
-  },
+    currency: currencyReducer
+  }
 });
 
 export type AppDispatch = typeof store.dispatch;

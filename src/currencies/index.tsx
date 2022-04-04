@@ -1,14 +1,14 @@
-import { useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { ListItem } from "./components/ListItem";
-import { Typography } from "./components/Typography";
-import { getCurrencies } from "./currencySlice";
-import { RootState } from "../store";
-import { Link } from "react-router-dom";
-import ListLoader from "./components/Loader/ListLoader";
-import { Flex } from "./components/Flex";
+import { useMemo } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { ListItem } from '../components/ListItem';
+import { Typography } from '../components/Typography';
+import { getCurrencies } from './currencySlice';
+import { RootState } from '../store';
+import ListLoader from '../components/Loader/ListLoader';
+import { Flex } from '../components/Flex';
 
-const Currencies = () => {
+function Currencies() {
   const dispatch = useDispatch();
   const { data, loading, error, filterCurrencies } = useSelector(
     (state: RootState) => state.currency.currencies
@@ -32,21 +32,21 @@ const Currencies = () => {
       ))}
       {loading && <ListLoader />}
       {!!error && (
-        <Flex style={{ margin: "auto" }}>
-          <Typography size="md" style={{ textTransform: "capitalize" }}>
+        <Flex style={{ margin: 'auto' }}>
+          <Typography size="md" style={{ textTransform: 'capitalize' }}>
             {error}
           </Typography>
         </Flex>
       )}
       {!(filterCurrencies || data)?.length && (
-        <Flex style={{ margin: "auto" }}>
-          <Typography size="md" style={{ textTransform: "capitalize" }}>
-            {!data?.length ? "No currencies found" : "No search results Found"}
+        <Flex style={{ margin: 'auto' }}>
+          <Typography size="md" style={{ textTransform: 'capitalize' }}>
+            {!data?.length ? 'No currencies found' : 'No search results Found'}
           </Typography>
         </Flex>
       )}
     </>
   );
-};
+}
 
 export default Currencies;
